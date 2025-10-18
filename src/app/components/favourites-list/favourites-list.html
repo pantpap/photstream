@@ -1,4 +1,4 @@
-<div class="flex justify-center mt-8">
+<div class="flex justify-center p-8">
   <div class="grid grid-cols-3 gap-y-10 gap-x-20 [grid-template-columns:repeat(auto-fill,200px)]">
     @for (photo of favoritesPhotos(); track photo.id) {
       <div (click)="viewPhoto(photo)" class="cursor-pointer w-[200px] text-center">
