@@ -1,1 +1,20 @@
-<p>singe-page-photo works!</p>
+@if(favoritePhoto(); as photo){
+  <div class="flex flex-col items-center gap-6 mt-8">
+    <div class="relative w-full max-w-5xl mx-auto aspect-video">
+    <img
+      [ngSrc]="photo.download_url"
+      fill
+      class="object-cover rounded-lg shadow-md"
+      [alt]="'Favorite Photo ' + photo.id"
+    />
+    </div>
+
+    <button (click)="removeFromFavorites(photo.id)"
+            matFab extended>
+      <mat-icon>remove</mat-icon>
+      Remove from favorites
+    </button>
+  </div>
+}
+
+
