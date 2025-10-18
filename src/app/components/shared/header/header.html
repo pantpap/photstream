@@ -1,0 +1,17 @@
+<div class="flex justify-center p-4 bg-white shadow-md">
+    <div class="flex w-1/3 justify-between">
+      <button routerLink="/"
+              routerLinkActive="active-btn"
+              [routerLinkActiveOptions]="{ exact: true }"
+              matFab extended>
+        <mat-icon>menu</mat-icon>
+        Photos
+      </button>
+      <button routerLink="favorites"
+              routerLinkActive="active-btn"
+              matFab extended>
+        <mat-icon>favorite</mat-icon>
+        Favorites
+      </button>
+    </div>
+  </div>
