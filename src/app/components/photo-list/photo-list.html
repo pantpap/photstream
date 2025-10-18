@@ -7,7 +7,7 @@
 } @else {
   <div class="flex justify-center mt-8">
     <div class="grid grid-cols-3 gap-y-10 gap-x-20 [grid-template-columns:repeat(auto-fill,200px)]">
-      @for (photo of photosResource.value(); track photo.id) {
+      @for (photo of photos(); track photo.id) {
         <div (click)="selectedPhoto(photo)" class="cursor-pointer w-[200px] text-center">
           <img
             [ngSrc]="photo.thumbUrl"

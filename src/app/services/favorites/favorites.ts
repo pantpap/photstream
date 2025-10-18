@@ -11,8 +11,6 @@ export class Favorites {
   private readonly localStorageService = inject(LocalStorage);
   private readonly favoritesPhotos = signal<Photo[]>([]);
 
-
-
   private readonly _selectedPhoto = signal<Photo | null>(null);
   readonly selectedPhoto = this._selectedPhoto.asReadonly();
 
