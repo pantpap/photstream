@@ -9,5 +9,4 @@ import {Header} from './components/shared/header/header';
   styleUrl: './app.scss'
 })
 export class App {
-  protected title = 'photostream';
 }
