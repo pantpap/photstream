@@ -1,7 +1,7 @@
 import {inject, Injectable} from '@angular/core';
 import {HttpClient, HttpResponse} from '@angular/common/http';
 import {delay, forkJoin, map, Observable, of, switchMap} from 'rxjs';
-import {Photo} from '../interfaces/photo';
+import {Photo} from '../../interfaces/photo';
 
 @Injectable({
   providedIn: 'root'

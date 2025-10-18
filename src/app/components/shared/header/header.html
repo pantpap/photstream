@@ -8,7 +8,7 @@
         Photos
       </button>
       <button routerLink="favorites"
-              routerLinkActive="active-btn"
+              [class.active-btn]="isFavoritesContext()"
               matFab extended>
         <mat-icon>favorite</mat-icon>
         Favorites
