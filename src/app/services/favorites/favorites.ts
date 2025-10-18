@@ -14,13 +14,16 @@ export class Favorites {
   private readonly _selectedPhoto = signal<Photo | null>(null);
   readonly selectedPhoto = this._selectedPhoto.asReadonly();
 
-  getFavorites(){
-    try{
-      return JSON.parse(this.localStorageService.getItem(FAV_PHOTOS));
+  constructor() {
+    try {
+      this.favoritesPhotos.set(JSON.parse(this.localStorageService.getItem(FAV_PHOTOS) ?? []));
     } catch {
-      console.log('Error handler while loading favorite photos from local storage');
-      return []
+      this.favoritesPhotos.set([]);
     }
+  }
+
+  getFavorites(){
+   return this.favoritesPhotos();
   }
 
   setFavorites(photo: Photo){
